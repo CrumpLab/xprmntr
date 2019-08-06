@@ -1,4 +1,4 @@
-# file: html_stimuli.R
+# file: html_stimulus.R
 # author: Matt Crump
 
 #' Write html stimulus description from dataframe
@@ -16,7 +16,7 @@
 #' @examples
 #'
 #' # define a data frame with stimulus info
-#' stroop_stim <- data.frame(stimuli = length(16),
+#' stroop_stim <- data.frame(stimulus = length(16),
 #'   word = rep(c("red","green","blue","yellow"), each=4),
 #'   color = rep(c("red","green","blue","yellow"), 4),
 #'   response = rep(c("r","g","b","y"), 4),
@@ -26,7 +26,7 @@
 #'   head(stroop_stim)
 #'
 #' # create html stimulus definition
-#' html_stimuli(df = stroop_stim,
+#' html_stimulus(df = stroop_stim,
 #'  html_content = "word",
 #'  html_element = "p",
 #'  column_names = c("color","fontsize"),
@@ -36,13 +36,13 @@
 #'
 #'  # use in a pipe to add stimulus definition to stimuli column
 #'  library(dplyr)
-#'  stroop_stim <- data.frame(stimuli = length(16),
+#'  stroop_stim <- data.frame(stimulus = length(16),
 #'     word = rep(c("red","green","blue","yellow"), each=4),
 #'     color = rep(c("red","green","blue","yellow"), 4),
 #'     response = rep(c("r","g","b","y"), 4),
 #'     id = "stroop_stim",
 #'     fontsize = "16pt") %>%
-#'   mutate(stimuli = html_stimuli(df = .,
+#'   mutate(stimulus = html_stimulus(df = .,
 #'                      html_content = "word",
 #'                      html_element = "p",
 #'                      column_names = c("color","fontsize"),
@@ -51,7 +51,7 @@
 #'   head(stroop_stim)
 #'
 #'
-html_stimuli <- function(df, html_content, html_element, column_names, css=NULL, id="my_stim"){
+html_stimulus <- function(df, html_content, html_element, column_names, css=NULL, id="my_stim"){
 
   # assign ids
   if(!is.null(df$id)){
