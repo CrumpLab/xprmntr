@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Behavioral Experiments in the Browser • xprmntr</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Behavioral Experiments in the Browser">
 <meta property="og:description" content="What the package does (one paragraph).">
 <meta name="twitter:card" content="summary">
@@ -39,7 +38,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -50,7 +49,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/djnavarro/xprmntr">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -63,7 +62,6 @@
 <!--/.navbar -->
 
       
-
       </header><div class="row">
   <div class="col-md-9 contents">
     
@@ -81,38 +79,38 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>The development version can be installed from <a href="https://github.com/">GitHub</a> with:</p>
-<pre><code><a href="https://rdrr.io/pkg/devtools/man/reexports.html"># install.packages("devtools")
+<pre><code><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports"># install.packages("devtools")
 devtools::install_github("djnavarro/xprmntr")</a></code></pre>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>Simple example that implements a variation of demo 2 from the <code>jspsych</code> library examples.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xprmntr)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(magrittr)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># vector of file paths to the resources to be included</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">img &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"rainbow.svg"</span>, <span class="st">"transgender.svg"</span>, <span class="st">"bisexual.svg"</span>)</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6">img &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="dt">package =</span> <span class="st">"rainbowr"</span>), img)</a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co"># create an experiment with three trials</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">xpt &lt;-<span class="st"> </span><span class="kw"><a href="reference/jspsych_create.html">jspsych_create</a></span>(<span class="dt">files =</span> img) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"image-keyboard-response"</span>, <span class="dt">stimulus =</span> <span class="kw"><a href="reference/resource.html">resource</a></span>(<span class="st">"rainbow.svg"</span>),</a>
-<a class="sourceLine" id="cb2-11" data-line-number="11">              <span class="dt">prompt =</span> <span class="st">"Do you like this flag? (Y or N)"</span>, <span class="dt">choices =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">89</span>, <span class="dv">78</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"image-keyboard-response"</span>, <span class="dt">stimulus =</span> <span class="kw"><a href="reference/resource.html">resource</a></span>(<span class="st">"transgender.svg"</span>),</a>
-<a class="sourceLine" id="cb2-13" data-line-number="13">              <span class="dt">prompt =</span> <span class="st">"Do you like this flag? (Y or N)"</span>, <span class="dt">choices =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">89</span>, <span class="dv">78</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"image-keyboard-response"</span>, <span class="dt">stimulus =</span> <span class="kw"><a href="reference/resource.html">resource</a></span>(<span class="st">"bisexual.svg"</span>),</a>
-<a class="sourceLine" id="cb2-15" data-line-number="15">              <span class="dt">prompt =</span> <span class="st">"Do you like this flag? (Y or N)"</span>, <span class="dt">choices =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">89</span>, <span class="dv">78</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"survey-likert"</span>, <span class="dt">questions =</span> <span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(</a>
-<a class="sourceLine" id="cb2-17" data-line-number="17">    <span class="dt">prompt =</span> <span class="st">"How much did you enjoy this?"</span>,</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18">    <span class="dt">labels =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"a lot"</span>, <span class="st">"not much"</span>, <span class="st">"not at all"</span>), <span class="dt">required =</span> <span class="ot">TRUE</span>))) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="st">  </span><span class="kw"><a href="reference/jspsych_init.html">jspsych_init</a></span>(</a>
-<a class="sourceLine" id="cb2-20" data-line-number="20">    <span class="dt">default_iti =</span> <span class="dv">250</span>,</a>
-<a class="sourceLine" id="cb2-21" data-line-number="21">    <span class="dt">on_finish =</span> <span class="kw"><a href="reference/unquote.html">unquote</a></span>(<span class="st">"xprmntr.save_locally"</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(xprmntr)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(magrittr)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># vector of file paths to the resources to be included</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>img &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"rainbow.svg"</span>, <span class="st">"transgender.svg"</span>, <span class="st">"bisexual.svg"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>img &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/file.path">file.path</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"extdata"</span>, <span class="dt">package =</span> <span class="st">"rainbowr"</span>), img)</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># create an experiment with three trials</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>xpt &lt;-<span class="st"> </span><span class="kw"><a href="reference/jspsych_create.html">jspsych_create</a></span>(<span class="dt">files =</span> img) <span class="op">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"image-keyboard-response"</span>, <span class="dt">stimulus =</span> <span class="kw"><a href="reference/resource.html">resource</a></span>(<span class="st">"rainbow.svg"</span>),</span>
+<span id="cb2-11"><a href="#cb2-11"></a>              <span class="dt">prompt =</span> <span class="st">"Do you like this flag? (Y or N)"</span>, <span class="dt">choices =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">89</span>, <span class="dv">78</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"image-keyboard-response"</span>, <span class="dt">stimulus =</span> <span class="kw"><a href="reference/resource.html">resource</a></span>(<span class="st">"transgender.svg"</span>),</span>
+<span id="cb2-13"><a href="#cb2-13"></a>              <span class="dt">prompt =</span> <span class="st">"Do you like this flag? (Y or N)"</span>, <span class="dt">choices =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">89</span>, <span class="dv">78</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"image-keyboard-response"</span>, <span class="dt">stimulus =</span> <span class="kw"><a href="reference/resource.html">resource</a></span>(<span class="st">"bisexual.svg"</span>),</span>
+<span id="cb2-15"><a href="#cb2-15"></a>              <span class="dt">prompt =</span> <span class="st">"Do you like this flag? (Y or N)"</span>, <span class="dt">choices =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">89</span>, <span class="dv">78</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="st">  </span><span class="kw"><a href="reference/jspsych_add.html">jspsych_add</a></span>(<span class="dt">type =</span> <span class="st">"survey-likert"</span>, <span class="dt">questions =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</span>
+<span id="cb2-17"><a href="#cb2-17"></a>    <span class="dt">prompt =</span> <span class="st">"How much did you enjoy this?"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="dt">labels =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"a lot"</span>, <span class="st">"not much"</span>, <span class="st">"not at all"</span>), <span class="dt">required =</span> <span class="ot">TRUE</span>))) <span class="op">%&gt;%</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="st">  </span><span class="kw"><a href="reference/jspsych_init.html">jspsych_init</a></span>(</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    <span class="dt">default_iti =</span> <span class="dv">250</span>,</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="dt">on_finish =</span> <span class="kw"><a href="reference/unquote.html">unquote</a></span>(<span class="st">"xprmntr.save_locally"</span>))</span></code></pre></div>
 <p>Write self-contained experiment to a directory:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="reference/jspsych_write.html">jspsych_write</a></span>(xpt, <span class="st">"~/Desktop/expt"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="reference/jspsych_write.html">jspsych_write</a></span>(xpt, <span class="st">"~/Desktop/expt"</span>)</span></code></pre></div>
 <p>To run the experiment:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">xprmntr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/xprmntr/man/run_locally.html">run_locally</a></span>(<span class="st">"~/Desktop/expt"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>xprmntr<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/xprmntr/topics/run_locally">run_locally</a></span>(<span class="st">"~/Desktop/expt"</span>)</span></code></pre></div>
 </div>
 </div>
   </div>
@@ -138,7 +136,7 @@ devtools::install_github("djnavarro/xprmntr")</a></code></pre>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Danielle Navarro <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7648-6578" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID"></a> </li>
+<li>Danielle Navarro <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7648-6578" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
 </ul>
 </div>
 
@@ -154,20 +152,17 @@ devtools::install_github("djnavarro/xprmntr")</a></code></pre>
 </div>
 
 
-
       <footer><div class="copyright">
   <p>Developed by Danielle Navarro.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
 </div>
-
       </footer>
 </div>
 
   
-
 
   </body>
 </html>
