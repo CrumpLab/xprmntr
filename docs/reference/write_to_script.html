@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • xprmntr</title>
+<title>Write json to js script — write_to_script • xprmntr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Write json to js script — write_to_script" />
+
+<meta property="og:description" content="To be used in a knitr code chunk with results=&quot;asis&quot;" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -94,96 +97,54 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Write json to js script</h1>
+    <small class="dont-index">Source: <a href='https://github.com/djnavarro/xprmntr/blob/master/R/write_to_script.R'><code>R/write_to_script.R</code></a></small>
+    <div class="hidden name"><code>write_to_script.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>To be used in a knitr code chunk with results="asis"</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="html_stimulus.html">html_stimulus()</a></code> </p>
-        </td>
-        <td><p>Write html stimulus description from dataframe</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="jspsych_add.html">jspsych_add()</a></code> </p>
-        </td>
-        <td><p>Add trial that shows an image and respond with keyboard</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="jspsych_create.html">jspsych_create()</a></code> </p>
-        </td>
-        <td><p>Initialise an experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="jspsych_init.html">jspsych_init()</a></code> </p>
-        </td>
-        <td><p>Options on initialisation</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="jspsych_write.html">jspsych_write()</a></code> </p>
-        </td>
-        <td><p>Convert the experiment object to HTML file</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="resource.html">resource()</a></code> </p>
-        </td>
-        <td><p>Refer to a resource file</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="run_locally.html">run_locally()</a></code> </p>
-        </td>
-        <td><p>Run a jspsych experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="stimulus_df_to_json.html">stimulus_df_to_json()</a></code> </p>
-        </td>
-        <td><p>Convert stimulus dataframe to json object</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="unquote.html">unquote()</a></code> </p>
-        </td>
-        <td><p>Specify js code directly</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="write_to_script.html">write_to_script()</a></code> </p>
-        </td>
-        <td><p>Write json to js script</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>write_to_script</span>(<span class='no'>json_object</span>, <span class='kw'>var_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>json_object</th>
+      <td><p>string a json object</p></td>
+    </tr>
+    <tr>
+      <th>var_name</th>
+      <td><p>character default=NULL, set name to declare json object as a variable</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>string printed to the html as a &lt;script&gt;&lt;/script&gt;</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
