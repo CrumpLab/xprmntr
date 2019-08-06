@@ -7,7 +7,7 @@
 #' @param html_content character column name containing html content to be placed between html element tags
 #' @param html_element character the html element tag to use
 #' @param column_names vector of column names containing css attribute definitions
-#' @param css vector of column names containing the css attribute names
+#' @param css vector of names containing valid css attribute names
 #' @param id character to set the id of the html element, defaults to "my_stim"
 #'
 #' @return vector of html code defining each stimulus

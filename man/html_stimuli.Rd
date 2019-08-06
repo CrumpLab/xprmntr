@@ -16,7 +16,7 @@ html_stimuli(df, html_content, html_element, column_names, css = NULL,
 
 \item{column_names}{vector of column names containing css attribute definitions}
 
-\item{css}{vector of column names containing the css attribute names}
+\item{css}{vector of names containing valid css attribute names}
 
 \item{id}{character to set the id of the html element, defaults to "my_stim"}
 }
