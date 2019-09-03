@@ -4,11 +4,13 @@
 \alias{run_locally}
 \title{Run a jspsych experiment}
 \usage{
-run_locally(path = ".", xprmntr_host = "127.0.0.1",
-  xprmntr_port = 8000)
+run_locally(path = ".", show_in = "viewer",
+  xprmntr_host = "127.0.0.1", xprmntr_port = 8000)
 }
 \arguments{
 \item{path}{path}
+
+\item{show_in}{string, "viewer" to show in viewer, or "browser" to show in browser}
 
 \item{xprmntr_host}{host defaults to 127.0.0.1}
 
