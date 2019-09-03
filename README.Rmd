@@ -27,7 +27,7 @@ The development version can be installed from [GitHub](https://github.com/) with
 
 ``` 
 # install.packages("devtools")
-devtools::install_github("djnavarro/xprmntr")
+devtools::install_github("CrumpLab/xprmntr")
 ```
 ## Example
 
