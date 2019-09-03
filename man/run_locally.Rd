@@ -4,10 +4,15 @@
 \alias{run_locally}
 \title{Run a jspsych experiment}
 \usage{
-run_locally(path = ".")
+run_locally(path = ".", xprmntr_host = "127.0.0.1",
+  xprmntr_port = 8000)
 }
 \arguments{
 \item{path}{path}
+
+\item{xprmntr_host}{host defaults to 127.0.0.1}
+
+\item{xprmntr_port}{port defaults to 8000}
 }
 \description{
 Run a jspsych experiment
